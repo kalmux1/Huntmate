@@ -10,7 +10,7 @@ document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
     const storedState = localStorage.getItem(`checkbox-${checkbox.id}`);
     if (storedState !== null) {
         checkbox.checked = storedState === 'true';
-    }
+    } 
 });
 
 // Clear checkboxes when the clear button is clicked
