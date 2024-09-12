@@ -44,7 +44,7 @@ To set up HuntMate locally, follow these steps:
 - **Vulnerability Database**: Browse and review detailed descriptions of 100 common vulnerabilities.
 - **Progress Tracking**: Mark tasks as completed to stay organized and up-to-date with your testing.
 
-## 📂 Folder Structure
+## 📂 Project Structure
 
 ```
 /Huntmate
