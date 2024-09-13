@@ -1,0 +1,221 @@
+body {
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0a0e14;
+    color: #00ff00;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    margin-left: 0;
+    padding-left: 0;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+    padding: 25px;
+}
+
+.top-right-btn {
+    position: absolute;
+    top: 40px;
+    right: 32px;
+}
+
+#vulnerabilities-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#vulnerabilities-btn:hover {
+    background-color: #3e8e41;
+}
+
+.hidden {
+    display: none;
+  }
+
+.top-right-checkbox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.bottom-right-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1; /* to ensure it stays on top of other elements */
+  display: inline-flex; /* use inline-flex to position the icon and label */
+  align-items: center; /* center the icon and label vertically */
+}
+
+.bottom-right-btn:hover {
+  background-color: #0a0e14;
+}
+
+.bottom-right-btn svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  transition: transform 0.2s; /* add transition effect */
+  background-color: #ffffff; /* add white background to the icon */
+  border-radius: 50%; /* make the icon circular */
+  padding: 5px; /* add some padding around the icon */
+}
+
+.bottom-right-btn:hover svg {
+  transform: scale(1.2); /* scale up the icon on hover */
+}
+
+.bottom-right-btn .label {
+  margin-left: 10px; /* add margin to separate the icon and label */
+  opacity: 0; /* hide the label by default */
+  transition: opacity 0.2s; /* add transition effect */
+  pointer-events: none; /* prevent the label from being clickable */
+}
+
+.bottom-right-btn:hover .label {
+  opacity: 1; /* show the label on hover */
+  pointer-events: auto; /* allow the label to be clickable on hover */
+}
+
+.btn-style {
+  background-color: #0a0e14;
+  color: #e209ff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+label {
+    margin-right: 20px;
+}
+
+
+h1 {
+    color: #00ffff; /* Cyan */
+    text-align: left; /* Align heading to the left */
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.75); /* Cyan glow */
+}
+
+h2 {
+    color: #ff0000; /* Red */
+    margin-top: 30px;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* Red glow */
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+
+input[type="checkbox"] {
+    appearance: none; /* Remove default appearance */
+    width: 20px;
+    height: 20px;
+    background-color: #003366; /* Dark Blue */
+    border: 2px solid #003366;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-right: 10px; /* Space between checkbox and text */
+}
+
+input[type="checkbox"]:checked::before {
+    content: '✔';
+    color: #00ff00; /* Green checkmark */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+}
+
+input[type="checkbox"]:hover {
+    background-color: #004080; /* Slightly lighter dark blue */
+}
+
+section {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+section:hover {
+    background-color: #0e1720;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #00ff00;
+    animation: fadeIn 2s ease-in-out;
+}
+
+footer {
+    text-align: center;
+    color: #00ff00;
+    font-size: 14px;
+    padding: 10px;
+    background-color: #0a0e14;
+    border-top: 1px solid #30363d;
+}
+
+footer a {
+    color: #00ffff; /* Cyan */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    ul li {
+        font-size: 16px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes textGlow {
+    from { text-shadow: 0 0 5px rgba(255, 0, 0, 0.5); } /* Red glow */
+    to { text-shadow: 0 0 15px rgba(255, 0, 0, 0.75); } /* Intense Red glow */
+}
+
